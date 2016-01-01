@@ -2,8 +2,9 @@ from setuptools import setup
  
 setup(
     name = 'BSSLint',
-    packages = ['BSSL'],
+    packages = ['BSSLint'],
     version = '0.1',
+    scripts=['bsslint'],
     description = 'Derived from the popular CPPLint from Google, but modified to incorporate code styles by Dr. B.S. Sanjeev for my undergraduate Data Structures and Algorithms courses',
     author='Anmol Jagetia',
     author_email='anmoljagetia@gmail.com',
