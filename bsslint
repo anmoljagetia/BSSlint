@@ -495,7 +495,7 @@ _root = None
 
 # The allowed line length of files.
 # This is set by --linelength flag.
-_line_length = 80
+_line_length = 120
 
 # The allowed extensions for file names
 # This is set by --extensions flag.
@@ -3908,7 +3908,7 @@ def CheckBraces(filename, clean_lines, linenum, error):
     # the previous non-blank line is ',', ';', ':', '(', '{', or '}', or if the
     # previous line starts a preprocessor block.
     prevline = GetPreviousNonBlankLine(clean_lines, linenum)[0]
-    if (not Search(r'(main)|[,;:}{(]\s*$|\((.*)\)$', prevline) and
+    if (not Search(r'(main)|[,;:}{(]\s*$|(bool|void|int|char|float|double|struct)\s*\w+\s*\((.*)\)', prevline) and
         not Match(r'\s*#', prevline)):
       error(filename, linenum, 'whitespace/braces', 4,
             '{ should almost always be at the end of the previous line')
@@ -4394,9 +4394,9 @@ def CheckStyle(filename, clean_lines, linenum, file_extension, nesting_state,
   raw_lines = clean_lines.lines_without_raw_strings
   line = raw_lines[linenum]
 
-  if line.find('\t') != -1:
-    error(filename, linenum, 'whitespace/tab', 1,
-          'Tab found; better to use spaces')
+  # if line.find('\t') != -1:
+  #   error(filename, linenum, 'whitespace/tab', 1,
+  #         'Tab found; better to use spaces')
 
   # One or three blank spaces at the beginning of the line is weird; it's
   # hard to reconcile that with 2-space indents.
