@@ -1,3 +1,4 @@
+![BSSLint-Logo](https://raw.githubusercontent.com/anmoljagetia/BSSlint/master/Resources/logo.png)
 # BSSlint
 
 Derived from the popular CPPLint from Google, but modified to incorporate code styles by Dr. B.S. Sanjeev for my undergraduate Data Structures and Algorithms courses.
@@ -26,6 +27,8 @@ or
 sudo easy_install bsslint
 ```
 
+![BSSLint-Installation](https://raw.githubusercontent.com/anmoljagetia/BSSlint/master/Resources/install.gif)
+
 ### Method 2 (Do It Yourself)
 The script can also be directly used by downloading the binary into the folder of execution by running the command :
 
@@ -44,6 +47,8 @@ If you have installed `bsslint` globally, and if it is available in your `$PATH`
 ```
 bsslint [FILENAME]
 ```
+![BSSLint-Usage](https://raw.githubusercontent.com/anmoljagetia/BSSlint/master/Resources/usage.gif)
+
 
 Another cool way of using `bsslint` is to use add the following mapping in `vimrc` to add a key (like F8), to run the lint when desired :
 
@@ -51,6 +56,9 @@ Another cool way of using `bsslint` is to use add the following mapping in `vimr
 autocmd filetype cpp nnoremap<F8> :!bsslint % <CR>
 autocmd filetype c nnoremap<F8> :!bsslint % <CR>
 ```
+
+![BSSLint-Usage-inside-vim-F8](https://raw.githubusercontent.com/anmoljagetia/BSSlint/master/Resources/f8.gif)
+
 For similar tools to compile and evaluate results like IDE from within vim, check out my [vimrc](https://github.com/anmoljagetia/dotfiles/blob/master/vim/vimrc#L86-L90) and other [dotfiles](https://github.com/anmoljagetia/dotfiles).
 
 ## Full Disclaimer
